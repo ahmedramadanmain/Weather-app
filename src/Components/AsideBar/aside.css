@@ -1,0 +1,111 @@
+.sidebar {
+  width: 300px;
+  min-width: 300px;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  transition:
+    width 0.3s ease,
+    min-width 0.3s ease;
+}
+
+.sidebar-inner {
+  width: 280px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px 20px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebar h2 {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+.sidebar h2 img {
+  width: 60px;
+}
+
+.logo-text {
+  transition: opacity 0.2s ease;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  margin-top: 50px;
+
+  flex: 1;
+}
+
+.sidebar ul li a {
+  padding: 10px;
+
+  color: #919bac;
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  font-size: 2rem;
+
+  border-radius: 20px;
+
+  white-space: nowrap;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #13489c;
+  color: #fff;
+}
+
+.sidebar ul li span {
+  margin-left: 15px;
+}
+
+
+/* =========================
+   SETTINGS
+========================= */
+
+.sidebar .setting-icon {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-left: 15px;
+
+  font-size: 2rem;
+
+  color: #919bac;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}

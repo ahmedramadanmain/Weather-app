@@ -1,0 +1,48 @@
+.head h2 {
+  display: flex;
+  gap: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+@media (max-width:767px){
+  .head h2{
+    font-size: 1.5rem;
+  }
+}
+.addToFav {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  box-shadow: 10px 10px 10px 10px #ddd;
+  border-radius: 15px;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #104ca8;
+}
+@media (max-width:767px){
+  .head h2{
+    font-size: 1.5rem;
+  }
+  .addToFav{
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+}
+.css-1014916-MuiPickersInputBase-root-MuiPickersOutlinedInput-root,
+.css-1umw9bq-MuiSvgIcon-root {
+  font-size: 2rem !important;
+}
+.css-cyfsxc-MuiPickersCalendarHeader-labelContainer {
+    font-size: 1.3rem !important;
+}
+.css-yb8ipo-MuiButtonBase-root-MuiPickerDay-root,.css-17f9e7e-MuiTypography-root-MuiDayCalendar-weekDayLabel{
+    font-size: 1.1rem !important;
+}
+
+
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root{
+    font-size: 1.3rem !important;
+}

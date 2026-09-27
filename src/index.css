@@ -1,0 +1,28 @@
+:root{
+    --main-color:#0A2144;
+    
+}
+.bg-main-color{
+    background-color: var(--main-color);
+}
+body{
+    background-color: #F3F7FC !important;
+
+}
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-track{
+      background: #f1f1f1;
+
+}
+/* Thumb - the draggable part */
+::-webkit-scrollbar-thumb {
+  background: #112C48;
+  border-radius: 10px;
+  
+}
+/* Thumb when hovering */
+::-webkit-scrollbar-thumb:hover {
+  background: #0d2238;
+}

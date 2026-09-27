@@ -1,0 +1,25 @@
+.popular-cities{
+    box-shadow: 10px 10px 10px 10px #ddd;
+    padding: 10px;
+    border-radius: 15px;
+}
+.search-sidebar{
+    min-height: 600px;
+    border-right: 3px solid #eee;
+}
+.recenct-searched{
+    padding: 15px;
+    border-radius: 15px;
+    border-bottom: 3px solid #eee;
+
+}
+.recenct-searched ul{
+    
+}
+.recenct-searched li{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.recenct-searched li svg{
+    cursor: pointer;
+}

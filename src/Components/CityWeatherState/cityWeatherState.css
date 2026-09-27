@@ -1,0 +1,42 @@
+
+/* ============================= */ /* STATISTICS */ /* ============================= */
+.statistics {
+  margin: 40px 0;
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+.statistics .box {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 15px;
+  background-color: white;
+}
+.statistics .icon {
+  flex-shrink: 0;
+}
+.statistics .box svg {
+  font-size: 3rem;
+  color: blue;
+} /* UV */
+.statistics .box:nth-of-type(4) svg {
+  color: #f5c400;
+} /* ============================= */ /* STATISTICS TEXT */ /* ============================= */
+
+.statistics .box h2 {
+  font-size: 1.2rem;
+  margin: 0 0 5px;
+  white-space: nowrap;
+}
+.statistics .box span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.statistics .wind-direction {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 8px;
+}

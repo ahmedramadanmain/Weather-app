@@ -1,0 +1,113 @@
+.daily-summary {
+  width: 100%;
+  box-shadow: 10px 10px 10px 10px #ddd;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.daily-summary h2 {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Shared Grid
+========================= */
+
+.summary-grid {
+  display: grid;
+
+  /*
+    Same columns are used by
+    both header and body.
+  */
+  grid-template-columns:
+    1.5fr
+    1.5fr
+    1fr
+    1.1fr
+    1fr
+    1.1fr
+    0.8fr;
+  width: 100%;
+  align-items: center;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.summary-head {
+  padding: 15px 0;
+
+  font-weight: 600;
+  font-size: 1.4rem;
+background-color: #F9FAFE;
+  border-bottom: 1px solid #ddd;
+}
+
+.summary-head .summary-grid > div {
+  padding: 0 15px;
+}
+
+
+/* =========================
+   Body
+========================= */
+
+.summary-row {
+  min-height: 75px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.summary-row > div {
+  padding: 0 15px;
+  font-size: 1.2rem;
+}
+
+
+/* =========================
+   Condition
+========================= */
+
+.summary-condition {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.summary-condition img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+/* =========================
+   Details Button
+========================= */
+
+.summary-details button {
+  border: none;
+  background: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #0960DE;
+  font-weight: 500;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 992px) {
+  .content {
+    overflow-x: auto;
+  }
+
+  .summary-grid {
+    min-width: 900px;
+  }
+}

@@ -1,0 +1,81 @@
+.home-page {
+  width: 100%;
+  min-width: 0;
+}
+ /* ============================= */ /* HOURLY FORECAST */ /* ============================= */
+.hourly-forecast {
+  width: 100%;
+  min-width: 0;
+} /* ================================================= */ /* TABLET */ /* ================================================= */
+@media (max-width: 1200px) {
+  .home-page .top .content h2 {
+    font-size: 3rem;
+  }
+  .home-page .weather-info img {
+    width: 180px;
+  }
+  .home-page .weather-info .temp {
+    font-size: 3rem;
+  }
+  .statistics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} /* ================================================= */ /* MOBILE */ /* ================================================= */
+@media (max-width: 768px) {
+  /* WEATHER CARD */
+  .home-page .top {
+    min-height: auto;
+    padding: 25px 20px;
+    border-radius: 25px;
+  }
+  .home-page .top .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .home-page .top .content h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .home-page .last-updated {
+    font-size: 0.85rem;
+  } /* WEATHER */
+  .home-page .weather-info {
+    gap: 10px;
+  }
+  .home-page .weather-info img {
+    width: 130px;
+    max-width: 35vw;
+  }
+  .home-page .weather-info .temp {
+    font-size: 2.5rem;
+  }
+  .home-page .weather-info .info span {
+    font-size: 1rem;
+  } /* LOCAL TIME */
+  .home-page .top .right {
+    align-self: flex-start;
+  }
+  .home-page .local-time {
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+  }
+} /* ================================================= */ /* SMALL MOBILE */ /* ================================================= */
+@media (max-width: 480px) {
+  .home-page .top {
+    padding: 20px 15px;
+  }
+  .home-page .top .content h2 {
+    font-size: 1.7rem;
+  }
+  .home-page .weather-info img {
+    width: 100px;
+  }
+  .home-page .weather-info .temp {
+    font-size: 2rem;
+  }
+  .home-page .weather-info .info span {
+    font-size: 0.85rem;
+  }
+}

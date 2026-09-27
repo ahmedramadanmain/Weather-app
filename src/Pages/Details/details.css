@@ -1,0 +1,336 @@
+.Details-page .statistics{
+    box-shadow: 10px 10px 10px 10px #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    gap: 0;
+    height: 560px;
+}
+.Details-page .statistics .box{
+    box-shadow: none;
+    border-radius: 0;
+}
+.Details-page .statistics .info {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.Details-page .statistics .box:last-of-type .info {
+    border-bottom: none;
+}
+.Details-page .card {
+    border: 1px solid #edf1f7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    padding: 16px;
+    border-radius: 14px;
+    min-height: 450px;
+    background: #fff;
+}
+
+.Details-page .card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #193b68;
+    margin-bottom: 18px;
+}
+/* =========================
+   AIR QUALITY
+========================= */
+
+.air-quality .aq-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 15px;
+}
+
+.aqi-value {
+    width: 58px;
+    height: 58px;
+
+    border: 3px solid #4cc978;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #36b967;
+    font-size: 1.2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.aq-status h3 {
+    margin: 0 0 3px;
+    color: #3bb86a;
+    font-size: 2rem;
+}
+
+.aq-status p {
+    margin: 0;
+    color: #9aa6b5;
+    font-size: 11px;
+}
+
+.pollutants {
+    display: flex;
+    flex-direction: column;
+}
+
+.pollutants > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 0;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.pollutants > div:last-child {
+    border-bottom: none;
+}
+
+.pollutants span {
+    font-size: 1.5rem;
+    color: #53657a;
+}
+
+.pollutants strong {
+    font-size: 1.4rem;
+    color: #52657b;
+    font-weight: 500;
+}
+/* =========================
+   SUN & MOON
+========================= */
+
+.sun-moon-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.astro-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.astro-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.astro-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff8e8;
+    font-size: 19px;
+}
+
+.astro-info span,
+.moon-phase span {
+    font-size: 1.3rem;
+    color: #64748b;
+}
+
+.astro-time {
+    font-size: 1.3rem;
+    color: #3d526d;
+    font-weight: 600;
+}
+
+.moon-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 3px;
+}
+
+.moon-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef4fb;
+
+    font-size: 22px;
+}
+
+.moon-phase {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.moon-phase strong {
+    font-size: 1rem;
+    color: #304968;
+}
+/* =========================
+   WIND
+========================= */
+
+.wind {
+    text-align: center;
+}
+
+.wind-compass {
+    display: flex;
+    justify-content: center;
+    margin: 3px 0 10px;
+}
+
+.compass {
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+
+    border: 2px solid #dceafa;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #193b68;
+}
+
+.compass::before {
+    content: "";
+
+    position: absolute;
+
+    width: 76px;
+    height: 76px;
+
+    border: 1px dashed #dceafa;
+    border-radius: 50%;
+}
+
+.compass span {
+    position: absolute;
+
+    font-size: 1rem;
+    font-weight: 700;
+    color: #72859c;
+}
+
+.compass .north {
+    top: 3px;
+}
+
+.compass .east {
+    right: 5px;
+}
+
+.compass .south {
+    bottom: 3px;
+}
+
+.compass .west {
+    left: 5px;
+}
+
+.compass strong {
+    position: relative;
+    font-size: 1rem;
+    color: #193b68;
+}
+
+.wind-arrow {
+    position: absolute;
+
+    top: 10px;
+
+    font-size: 29px;
+    color: #4285d4;
+
+    transform-origin: center;
+}
+
+.wind-data {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.wind-data div {
+    display: flex;
+    flex-direction: column;
+}
+
+.wind-data strong {
+    font-size: 1.2rem;
+    color: #304968;
+}
+
+.wind-data span {
+    font-size: 1.2;
+    color: #8b98a8;
+}
+/* =========================
+   PRESSURE & VISIBILITY
+========================= */
+
+.pressure {
+    display: flex;
+    flex-direction: column;
+}
+
+.pressure-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.pressure-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: #f1f7ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #3982d4;
+
+    font-size: 21px;
+}
+
+.pressure-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pressure-info span {
+    font-size: 1.3rem;
+    color: #718096;
+}
+
+.pressure-info strong {
+    font-size: 13px;
+    color: #304968;
+}
