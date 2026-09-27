@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home/Home";
 import Forecast from "./Pages/Forecast/Forecast";
@@ -10,9 +10,10 @@ import RootLayout from "./Layout/RootLayout";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Weather-app">
       <Routes>
-        <Route path="" element={<RootLayout />}>
+        <Route path="/" element={<RootLayout />}>
+          <Route index element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/forecast" element={<Forecast />} />
           <Route path="/search" element={<Search />} />
