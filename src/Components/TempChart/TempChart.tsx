@@ -8,23 +8,14 @@ import {
   YAxis,
 } from "recharts";
 import type { IWeatherResponse } from "../../interfaces/IRespone";
+import { getTempChartData } from "../../Util/Functions";
 
 interface ITempChartProps{
   data:IWeatherResponse,
   height:number
 }
 export default function TempChart({ data ,height}:ITempChartProps) {
-  const chartData = data.forecast.forecastday.map((item) => ({
-  day: new Date(item.date).toLocaleDateString("en-US", {
-    weekday: "short",
-  }),
-  date: new Date(item.date).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-  }),
-  high: item.day.maxtemp_c,
-  low: item.day.mintemp_c,
-}));
+  const chartData = getTempChartData(data);
   return (
     <div style={{ width: "100%", height: height }}>
       <LineChart

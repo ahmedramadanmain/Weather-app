@@ -8,35 +8,35 @@ import WeaklyForecast from "../../Components/WeaklyForecast/WeaklyForecast";
 import CityHeadTitle from "../../Components/CityHeadTitle/CityHeadTitle";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../Store/Store";
-import { getTempChartData } from "../../Util/Functions";
-
 
 const Forecast = () => {
-      const city=useSelector((state:RootState)=>state.city.value);
-  const {isPending, error, data } = useQuery<IWeatherResponse>({
+  const city = useSelector((state: RootState) => state.city.value);
+  const { isPending, error, data } = useQuery<IWeatherResponse>({
     queryKey: ["weather", city],
     queryFn: () => getWeather(city),
   });
- const chartData=getTempChartData(data)
-    if (isPending) {
+  
+  if (isPending) {
     return <Loading />;
   }
   if (error) {
     return <h2>{error.message}</h2>;
   }
-    return (
-        <div className="forecast-page">
-      
-        <CityHeadTitle region={data.location.region} country={data.location.country} addToFavorites={false} date={false}/>
-        <div className="tempchart">
-        <TempChart data={chartData} height={"300px"} />
+  return (
+    <div className="forecast-page">
+      <CityHeadTitle
+        region={data.location.region}
+        country={data.location.country}
+        addToFavorites={false}
+        date={false}
+      />
+      <div className="tempchart">
+        <TempChart data={data} height={300} />
+      </div>
+      <HourlyForecast forecastday={data.forecast.forecastday} />
+      <WeaklyForecast forecastday={data.forecast.forecastday} />
+    </div>
+  );
+};
 
-        </div>
-        <HourlyForecast forecastday={data.forecast.forecastday} />
-        <WeaklyForecast forecastday={data.forecast.forecastday}/>
-
-        </div>
-     );
-}
- 
 export default Forecast;

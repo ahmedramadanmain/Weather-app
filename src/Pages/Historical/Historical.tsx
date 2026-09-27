@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../../Store/Store";
 import { Col, Row } from "react-bootstrap";
 import TempChart from "../../Components/TempChart/TempChart";
-import { getTempChartData } from "../../Util/Functions";
 import PrecipitationChart from "../../Components/PrecipitationChart/PrecipitationChart";
 import DailySummary from "../../Components/DailySummary/DailySummary";
 
@@ -17,7 +16,6 @@ const Historical = () => {
     queryKey: ["weather", city],
     queryFn: () => getWeather(city),
   });
-   const chartData=getTempChartData(data)
 
   if (isPending) {
     return <Loading />;
@@ -35,7 +33,7 @@ const Historical = () => {
       />
       <Row>
         <Col md={6} sm={12}>
-          <TempChart data={chartData} height={"365px"}/>
+          <TempChart data={data} height={365}/>
         </Col>
         
         <Col md={6} sm={12}>
