@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] }),
-    base: "/Weather-app/",
+   
   ],
+   base:"/Weather-app/",
 })

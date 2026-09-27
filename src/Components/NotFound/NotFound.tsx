@@ -1,4 +1,4 @@
-import { Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -17,10 +17,10 @@ const NotFound = () => {
         Sorry, the page you're looking for doesn't exist.
       </p>
 
-      <Button as={Link} to="/" variant="primary">
+      <Link  to="/" className="btn-primary">
         <FaArrowLeft className="me-2" />
         Back to Home
-      </Button>
+      </Link>
     </Container>
   );
 };

@@ -4,7 +4,13 @@ import { GiPressureCooker } from "react-icons/gi";
 import { GoSun } from "react-icons/go";
 
 import "./cityWeatherState.css"
-const CityWeatherState = ({data,boxStyle}) => {
+import type { IWeatherResponse } from "../../interfaces/IRespone";
+
+interface ICityWeatherStateProps{
+  data:IWeatherResponse,
+  boxStyle:string
+}
+const CityWeatherState = ({data,boxStyle}:ICityWeatherStateProps) => {
   return (
     <section className={`statistics`}>
       {/* Humidity */}

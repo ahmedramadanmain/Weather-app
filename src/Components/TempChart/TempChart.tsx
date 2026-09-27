@@ -7,15 +7,31 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import type { IWeatherResponse } from "../../interfaces/IRespone";
 
-export default function TempChart({ data ,height}) {
+interface ITempChartProps{
+  data:IWeatherResponse,
+  height:number
+}
+export default function TempChart({ data ,height}:ITempChartProps) {
+  const chartData = data.forecast.forecastday.map((item) => ({
+  day: new Date(item.date).toLocaleDateString("en-US", {
+    weekday: "short",
+  }),
+  date: new Date(item.date).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+  }),
+  high: item.day.maxtemp_c,
+  low: item.day.mintemp_c,
+}));
   return (
     <div style={{ width: "100%", height: height }}>
       <LineChart
         width={"100%"}
         height={height}
         responsive
-        data={data}
+        data={chartData}
         margin={{
           top: 10,
           right: 10,
@@ -28,7 +44,7 @@ export default function TempChart({ data ,height}) {
         <XAxis
           dataKey="day"
           tick={({ x, y, payload }) => {
-            const item = data[payload.index];
+            const item = chartData[payload.index];
 
             return (
               <g transform={`translate(${x},${y})`}>

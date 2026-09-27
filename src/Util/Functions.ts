@@ -1,7 +1,7 @@
-import type { IForecastDay, IWeatherResponse } from "../interfaces/IRespone";
+import type {IWeatherResponse } from "../interfaces/IRespone";
 import { getNamedTime } from "./TimeConverter";
 
-export function getTempChartData(data){
+export function getTempChartData(data:IWeatherResponse){
      return data?.forecast.forecastday.map((forecastDay)=>{
     return {
       day:getNamedTime(forecastDay.date).weekday,

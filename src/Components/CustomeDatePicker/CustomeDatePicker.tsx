@@ -4,7 +4,6 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs, { Dayjs } from "dayjs";
 const CustomeDatePicker=()=>{
-  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
 
   const [date, setDate] = useState<Dayjs | null>(dayjs());
 
